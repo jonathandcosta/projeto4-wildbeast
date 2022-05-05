@@ -123,6 +123,16 @@ img {
   background: #b07dfb;
 }
 
+/*SETA*/
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
 /*RESPONSIVIDADE SIDENAV*/
 @media (max-width: 760px) {
   .sidenav {
@@ -132,6 +142,15 @@ img {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
+/*SETA*/
+  .sidenav::after {
+    content: "→";
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.3);
+    animation: seta 0.5s ease-in 0s infinite alternate;
+  }
   .sidenav ul {
     display: flex;
   }
